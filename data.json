@@ -1,0 +1,23 @@
+{
+    "main_menu_lugoge": {
+        "title": "Main Menu",
+        "purpose": "Navigate to different areas of the application.",
+        "tips": [
+            "Enter the number next to each option",
+            "Enter 0 to return to the previous menu"
+        ]
+    },
+
+    "add_customer_lugoge": {
+        "title": "Add Customer",
+        "purpose": "Create a customer profile so bikes and maintenance can be tracked.",
+        "steps": [
+            "Enter the customer's full name",
+            "Enter phone number",
+            "Enter email address",
+            "Confirm to save the customer"
+    ],
+    "notes": "All fields except notes are required."
+
+    }
+}
