@@ -31,7 +31,7 @@ def get_info(context):
     return jsonify(response), 200
 
 # Can pull up all helpful tips, if just sending "/info" GET.
-@app.route("/info", method=["GET"])
+@app.route("/info", methods=["GET"])
 def list_available_contexts():
     help_data = load_help_data()
     return jsonify({
