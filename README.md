@@ -1,11 +1,14 @@
 # CS361-Information-Microservice
+Contributers: Gerardo, Matthew, Daniel, Thampanhaboth
 Microservice to Push Information about an application to the user.
 
+## What it does
 This program uses python FLASK, and JSON to run the information microservice.
+- Users can send a http request to this microservce and receive contextualized help information about features about a certain application.
 
-Create contextual information within the DATA.JSON file in order to pull details for your applicaiton.
+Created contextual information within the DATA.JSON file in order to pull details for your applicaiton.
 Example input:
-
+```JSON
     "context info": {
         "title": "Title of your help information",
         "purpose": "What is the help infromations purpose",
@@ -14,19 +17,36 @@ Example input:
         ]
         "Notes": (Optional)
     },
+```
+## Steps to run program:
+This program utilizes python and flask
 
-Steps to run program:
-
-Step 1) 
-Before running program make sure to run the following pip command.
-
-"pip install -r requirements.txt"
+### Step 1) 
+Before running program make sure to run the following pip command within the base terminal.
+```
+pip install -r requirements.txt
+```
 or 
-"pip3 install -r requirements.txt"
+```
+pip3 install -r requirements.txt
+```
 
-Step 2)
-Run the microservice using the following:
-
-"python service/app.py"
+### Step 2)
+Run the microservice using the following commande:
+```
+python service/app.py
+```
 or
-"python3 service/app.py"
+```
+python3 service/app.py
+```
+
+### Success when the following message appears
+Running on http://127.0.0.1:5004
+
+## Users can test by using cURL in a new terminal
+```
+curl http://localhost:5004/info/add_customer_lugoge
+curl http://localhost:5004/info/main_menu_lugoge
+curl http://localhost:5004/info
+```
