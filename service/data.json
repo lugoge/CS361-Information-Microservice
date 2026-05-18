@@ -16,8 +16,7 @@
             "Enter phone number",
             "Enter email address",
             "Confirm to save the customer"
-    ],
-    "notes": "All fields except notes are required."
-
+        ],
+        "notes": "All fields except notes are required."
     }
 }

@@ -3,32 +3,36 @@ import json
 import os
 
 app = Flask(__name__)
+app.config["TESTING"] = True
 
-DATA_FILE = "data.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DATA_FILE = os.path.join(BASE_DIR, "data.json")
 
 def load_help_data():
     """Load help hints form JSON file."""
     if not os.path.exists(DATA_FILE):
+        print("ERROR: data.json not found!")
         return()
     
     with open(DATA_FILE, "r") as file:
         return json.load(file)
 
 # Pulls contextual help tip from data base
-@app.route("/info/context>", methods=["GET"])
+@app.route("/info/<context>", methods=["GET"])
 def get_info(context):
     help_data = load_help_data()
 
-    if context not in help_data:
-        return jsonify({
-            "error": "No help infromation found for this context."
-        }), 404
-    
-    response = {
-        "context": context, **help_data[context]
-    }
+    print("DEBUG: requested =", context)
+    print("DEBUG: available = ", list(help_data.keys()))
+    print("DEBUG: file path =", DATA_FILE)
 
-    return jsonify(response), 200
+    if context not in help_data:
+        return jsonify({"error": "Not found"}), 404
+
+    return jsonify({
+        "context": context,
+        **help_data[context]
+    }), 200
 
 # Can pull up all helpful tips, if just sending "/info" GET.
 @app.route("/info", methods=["GET"])

@@ -27,6 +27,6 @@ or
 Step 2)
 Run the microservice using the following:
 
-"python app.py"
+"python service/app.py"
 or
-"python3 app.py"
+"python3 service/app.py"
