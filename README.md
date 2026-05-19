@@ -106,10 +106,6 @@ def display_info(self, data):
             print(data["notes"], "\n")
 ```
 
-Enter
-```
-add_customer_lugoge
-```
 ### Prompt to enter context
 
 The following prompt will show up:
@@ -117,6 +113,10 @@ The following prompt will show up:
 === Information Microservice Test Client ===
 
 Enter context (or 'exit' to quit):
+```
+Enter
+```
+add_customer_lugoge
 ```
 ### Recieve Data Example
 ```
