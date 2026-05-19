@@ -50,3 +50,5 @@ curl http://localhost:5004/info/add_customer_lugoge
 curl http://localhost:5004/info/main_menu_lugoge
 curl http://localhost:5004/info
 ```
+## UML 
+<img width="760" height="657" alt="UML" src="https://github.com/user-attachments/assets/97edc7fc-315b-4876-a36a-37e5a60e278f" />
