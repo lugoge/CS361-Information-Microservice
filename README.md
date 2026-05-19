@@ -50,5 +50,23 @@ curl http://localhost:5004/info/add_customer_lugoge
 curl http://localhost:5004/info/main_menu_lugoge
 curl http://localhost:5004/info
 ```
+
+## Request Data Example
+```
+curl http://localhost:5004/info/main_menu_lugoge
+```
+
+## Recieve Data Example
+```JSON
+{
+  "context": "main_menu_lugoge",
+  "purpose": "Navigate to different areas of the application.",
+  "tips": [
+    "Enter the number next to each option",
+    "Enter 0 to return to the previous menu"
+  ],
+  "title": "Main Menu"
+}
+```
 ## UML 
 <img width="760" height="657" alt="UML" src="https://github.com/user-attachments/assets/97edc7fc-315b-4876-a36a-37e5a60e278f" />
