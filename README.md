@@ -1,5 +1,6 @@
 # CS361-Information-Microservice
 Contributers: Gerardo, Matthew, Daniel, Thampanhaboth
+
 Microservice to Push Information about an application to the user.
 
 ## What it does
@@ -45,28 +46,37 @@ python3 service/app.py
 Running on http://127.0.0.1:5004
 
 ## Users can test by using cURL in a new terminal
+After running the application, in a new terminal run the following test file.
 ```
-curl http://localhost:5004/info/add_customer_lugoge
-curl http://localhost:5004/info/main_menu_lugoge
-curl http://localhost:5004/info
+python3 test/info_client.py
+```
+The following prompt will show up:
+=== Information Microservice Test Client ===
+
+Enter context (or 'exit' to quit):
+### Request Data Example
+Enter
+```
+add_customer_lugo
 ```
 
-## Request Data Example
+### Recieve Data Example
 ```
-curl http://localhost:5004/info/main_menu_lugoge
-```
+===================================
+ Add Customer
+===================================
 
-## Recieve Data Example
-```JSON
-{
-  "context": "main_menu_lugoge",
-  "purpose": "Navigate to different areas of the application.",
-  "tips": [
-    "Enter the number next to each option",
-    "Enter 0 to return to the previous menu"
-  ],
-  "title": "Main Menu"
-}
+Purpose:
+Create a customer profile so bikes and maintenance can be tracked. 
+
+Steps:
+1. Enter the customer's full name
+2. Enter phone number
+3. Enter email address
+4. Confirm to save the customer
+
+Notes:
+All fields except notes are required. 
 ```
 ## UML 
 <img width="760" height="657" alt="UML" src="https://github.com/user-attachments/assets/97edc7fc-315b-4876-a36a-37e5a60e278f" />
