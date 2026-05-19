@@ -51,13 +51,15 @@ After running the application, in a new terminal run the following test file.
 python3 test/info_client.py
 ```
 The following prompt will show up:
+```
 === Information Microservice Test Client ===
 
 Enter context (or 'exit' to quit):
+```
 ### Request Data Example
 Enter
 ```
-add_customer_lugo
+add_customer_lugoge
 ```
 
 ### Recieve Data Example
