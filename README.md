@@ -50,18 +50,74 @@ After running the application, in a new terminal run the following test file.
 ```
 python3 test/info_client.py
 ```
+### Request Data Example Code:
+```PYTHON
+def get_info(self, context):
+        """Request help information from the microservice."""
+        url = f"{self.base_url}/info/{context}"
+
+        try:
+            response = requests.get(url)
+
+            if response.status_code == 200:
+                return response.json()
+
+            elif response.status_code == 404:
+                return {"error": "Context not found"}
+
+            else:
+                return {"error": f"Unexpected status code: {response.status_code}"}
+
+        except requests.exceptions.ConnectionError:
+            return {"error": "Unable to connect to microservice"}
+        except Exception as e:
+            return {"error": str(e)}
+```
+### Data Display Example Code:
+```PYTHON
+def display_info(self, data):
+        """Display formatted help information."""
+        if "error" in data:
+            print("\nERROR:", data["error"])
+            return
+
+        print("\n===================================")
+        print(f" {data.get('title', 'No Title')}")
+        print("===================================\n")
+
+        if "purpose" in data:
+            print("Purpose:")
+            print(data["purpose"], "\n")
+
+        if "steps" in data:
+            print("Steps:")
+            for i, step in enumerate(data["steps"], start=1):
+                print(f"{i}. {step}")
+            print()
+
+        if "tips" in data:
+            print("Tips:")
+            for tip in data["tips"]:
+                print(f"- {tip}")
+            print()
+
+        if "notes" in data:
+            print("Notes:")
+            print(data["notes"], "\n")
+```
+
+Enter
+```
+add_customer_lugoge
+```
+### Prompt to enter context
+
 The following prompt will show up:
 ```
 === Information Microservice Test Client ===
 
 Enter context (or 'exit' to quit):
 ```
-### Request Data Example
-Enter
-```
-add_customer_lugoge
-```
-
 ### Recieve Data Example
 ```
 ===================================
