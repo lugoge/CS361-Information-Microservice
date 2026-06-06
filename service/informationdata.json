@@ -1,14 +1,18 @@
 {
-    "main_menu_lugoge": {
+    "main_menu": {
         "title": "Main Menu",
         "purpose": "Navigate to different areas of the application.",
         "tips": [
+            "Navigate the program using your keyboard",
+            "There is no time limit",
+            "Clear menus reduce memory load",
+            "Error messages guide correction",
             "Enter the number next to each option",
             "Enter 0 to return to the previous menu"
         ]
     },
 
-    "add_customer_lugoge": {
+    "add_customer": {
         "title": "Add Customer",
         "purpose": "Create a customer profile so bikes and maintenance can be tracked.",
         "steps": [
@@ -16,6 +20,19 @@
             "Enter phone number",
             "Enter email address",
             "Confirm to save the customer"
+        ],
+        "notes": "All fields except notes are required."
+    },
+
+    "add_bike": {
+        "title": "Add Bike",
+        "purpose": "Add the Customers bike as an asset",
+        "steps": [
+            "Select the customer's ID",
+            "Enter bike brand",
+            "Enter bike type",
+            "Enter bike year",
+            "Confirm to saved bike"
         ],
         "notes": "All fields except notes are required."
     }

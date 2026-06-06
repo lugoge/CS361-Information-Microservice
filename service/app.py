@@ -6,7 +6,7 @@ app = Flask(__name__)
 app.config["TESTING"] = True
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_FILE = os.path.join(BASE_DIR, "data.json")
+DATA_FILE = os.path.join(BASE_DIR, "informationdata.json")
 
 def load_help_data():
     """Load help hints form JSON file."""
